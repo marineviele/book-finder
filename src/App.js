@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+import Header from './components/Header';
+import BookList from './components/BookList';
+import Footer from './components/Footer';
+import fetchBookList from "./services/apiGoogleBooks";
+
+import './global.css';
+
+const App = () => {
+  const [bookQuery, setBookQuery] = useState([]);
+  const [bookList, setBookList] = useState([]);
+
+
+  const onBtnSearchClick = query => {
+    setBookQuery(query);
+  };
+ 
+  useEffect( () => {
+    if(bookQuery.length > 0) {
+      updateBookList();
+    }
+  }, [bookQuery])
+
+  const updateBookList = async () => {
+    setBookList(await fetchBookList(bookQuery));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header getBookQuery={onBtnSearchClick}/>
+      <BookList bookList={bookList}/>
+      <Footer/>
     </div>
-  );
+  )
 }
 
 export default App;
