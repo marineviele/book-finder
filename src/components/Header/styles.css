@@ -1,0 +1,24 @@
+header {
+    padding: 0 50px;
+    height: 240px;
+    position: relative;
+}
+
+header > h1 {
+    position: absolute;
+    top: 127px;
+}
+
+header > form {
+    position: absolute;
+    top: 165px;
+    z-index: 2;
+}
+
+header > img {
+    height: 170px;
+    position: absolute;
+    top: 30px;
+    left: 380px;
+    z-index: 1;
+}

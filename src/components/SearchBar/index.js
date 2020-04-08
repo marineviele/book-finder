@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import searchIcon from '../../assets/iconmonstr-magnifier-4.svg';
+import './styles.css';
 
 const SearchBar = ({ getBookQuery }) => {
   const [inputQuery, setInputQuery] = useState('');
@@ -14,7 +15,7 @@ const SearchBar = ({ getBookQuery }) => {
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
+    <form onSubmit={onFormSubmit} id="search-bar">
       <input
         type="text"
         placeholder="Search by title, author or subject"

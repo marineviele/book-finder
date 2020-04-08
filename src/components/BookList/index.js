@@ -2,6 +2,8 @@ import React from 'react';
 
 import BookCard from '../BookCard';
 
+import './styles.css';
+
 const BookList = ({ bookList = [] }) => {
   const createList = () => {
     return bookList.map((item) => {
@@ -27,11 +29,11 @@ const BookList = ({ bookList = [] }) => {
     });
   };
 
-  if (bookList.length < 1) {
-    return <h3>let's help Dennis pick a new book!</h3>;
-  }
-
-  return <ul>{createList()}</ul>;
+  return (
+    <div id="book-list">
+        <ul>{createList()}</ul>
+    </div>
+  ); 
 };
 
 export default BookList;
