@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './styles.css';
+import { FooterThemed } from './styles';
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterThemed>
       <p>
         made for Dennis with &hearts; by &nbsp;
         <a
@@ -23,7 +23,7 @@ const Footer = () => {
           <em>by Pablo Stanley</em>
         </a>
       </p>
-    </footer>
+    </FooterThemed>
   );
 };
 

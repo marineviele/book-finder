@@ -2,7 +2,7 @@ import React from 'react';
 
 import BookCard from '../BookCard';
 
-import './styles.css';
+import { BookListThemed } from './styles';
 
 const BookList = ({ bookList = [] }) => {
   const createList = () => {
@@ -30,9 +30,9 @@ const BookList = ({ bookList = [] }) => {
   };
 
   return (
-    <div id="book-list">
+    <BookListThemed>
         <ul>{createList()}</ul>
-    </div>
+    </BookListThemed>
   ); 
 };
 
