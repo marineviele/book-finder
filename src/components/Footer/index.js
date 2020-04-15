@@ -14,7 +14,7 @@ const Footer = () => {
         >
           marina
         </a>
-        &nbsp;with beautiful logos and inspiration from Open Peeps&nbsp;
+        &nbsp;with beautiful logo and inspiration from Open Peeps&nbsp;
         <a
           href="https://www.openpeeps.com/"
           target="_blank"
