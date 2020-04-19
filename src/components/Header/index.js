@@ -4,19 +4,20 @@ import { ThemeContext } from 'styled-components';
 
 import SearchBar from '../SearchBar';
 
-import { HeaderThemed } from './styles';
+import { HeaderThemed, HeaderSearch } from './styles';
 import smallLogo from '../../assets/icon_dennis_small.svg';
 import colorLogo from '../../assets/icon-dennis-color.svg';
-
 
 const Header = ({ getBookQuery, toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
 
   return (
     <HeaderThemed>
-      <h1>Dennis Book Finder</h1>
-      <SearchBar getBookQuery={getBookQuery} />
-      <img src={title === 'light' ? smallLogo : colorLogo} alt="logo" />
+      <HeaderSearch>
+        <h1>Dennis Book Finder</h1>
+        <SearchBar getBookQuery={getBookQuery} />
+        <img src={title === 'light' ? smallLogo : colorLogo} alt="logo" />
+      </HeaderSearch>
       <Switch
         checked={title === 'colored'}
         onChange={toggleTheme}

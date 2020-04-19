@@ -3,8 +3,27 @@ import styled from 'styled-components';
 export const HeaderThemed = styled.header`
   padding: 0 50px;
   height: 240px;
-  position: relative;
 
+  .react-switch {
+    position: relative !important;
+    right: 0px;
+    top: 50px;
+
+    -webkit-box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
+    -moz-box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
+    box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
+  }
+  
+  @media only screen and (min-width: 750px) {
+    .react-switch {
+      position: absolute !important;
+      top: 175px;
+      right: 100px;
+    }
+  }
+`;
+
+export const HeaderSearch = styled.section`
   h1 {
     position: absolute;
     top: 127px;
@@ -22,14 +41,5 @@ export const HeaderThemed = styled.header`
     top: 30px;
     left: 380px;
     z-index: 1;
-  }
-
-  .react-switch {
-    position: absolute !important;
-    top: 175px;
-    right: 100px;
-    -webkit-box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
-    -moz-box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
-    box-shadow: 5px 5px 10px ${(props) => props.theme.colors.shadowColor};
   }
 `;

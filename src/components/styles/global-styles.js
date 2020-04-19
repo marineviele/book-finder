@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.colors.primary};
     -webkit-fonyt-smoothing: antialiased;
     color: ${props => props.theme.colors.text};
+    min-width: 600px; 
+
   }
   
   input,
