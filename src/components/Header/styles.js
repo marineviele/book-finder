@@ -4,6 +4,25 @@ export const HeaderThemed = styled.header`
   padding: 0 50px;
   height: 240px;
 
+  h1 {
+    position: absolute;
+    top: 127px;
+  }
+
+  form {
+    position: absolute;
+    top: 165px;
+    z-index: 2;
+  }
+
+  img {
+    height: 170px;
+    position: absolute;
+    top: 30px;
+    left: 380px;
+    z-index: 1;
+  }
+
   .react-switch {
     position: relative !important;
     right: 0px;
@@ -23,23 +42,3 @@ export const HeaderThemed = styled.header`
   }
 `;
 
-export const HeaderSearch = styled.section`
-  h1 {
-    position: absolute;
-    top: 127px;
-  }
-
-  form {
-    position: absolute;
-    top: 165px;
-    z-index: 2;
-  }
-
-  img {
-    height: 170px;
-    position: absolute;
-    top: 30px;
-    left: 380px;
-    z-index: 1;
-  }
-`;

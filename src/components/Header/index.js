@@ -13,11 +13,11 @@ const Header = ({ getBookQuery, toggleTheme }) => {
 
   return (
     <HeaderThemed>
-      <HeaderSearch>
+      <section>
         <h1>Dennis Book Finder</h1>
         <SearchBar getBookQuery={getBookQuery} />
         <img src={title === 'light' ? smallLogo : colorLogo} alt="logo" />
-      </HeaderSearch>
+      </section>
       <Switch
         checked={title === 'colored'}
         onChange={toggleTheme}
